@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webseiten-Vorschau in einem Bildschirm</title>
+    <style>
+        /* Container für den Rahmen */
+        .screen-container {
+            width: 600px;
+            height: 400px;
+            background-color: #333; /* Hintergrundfarbe des "Bildschirms" */
+            border-radius: 20px; /* Runde Ecken für den Bildschirm */
+            padding: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Schatten für realistischen Effekt */
+            position: relative;
+        }
+
+        /* Simulation eines Randes am unteren Ende des Bildschirms */
+        .screen-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 10px;
+            background-color: #555; /* Farbe des Bildschirmrandes */
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* Iframe im Inneren des "Bildschirms" */
+        .screen-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Kein Rahmen um das Iframe */
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Webseiten-Vorschau in einem Bildschirm</h1>
+    
+    <!-- Bildschirm-Container -->
+    <div class="screen-container">
+        <!-- Iframe zur Anzeige der eingebetteten Webseite -->
+        <iframe src="https://digitalcareerinstitute.org/de/?utm_feeditemid&utm_device=c&utm_campaign_id=9598871719&utm_adgroup_id=166436268446&utm_ad_id=714307610862&utm_term=dci&utm_source=google&utm_medium=ppc&utm_campaign=DE_SEM_Competitors_Norden&utm_content=166436268446&hsa_cam=9598871719&hsa_mt=e&hsa_src=g&hsa_acc=9628643656&hsa_net=adwords&hsa_kw=dci&hsa_tgt=kwd-13304966&hsa_ver=3&hsa_grp=166436268446&hsa_ad=714307610862&gad_source=1&gclid=Cj0KCQjw99e4BhDiARIsAISE7P8N0crdIZNu8GlNsGZUjVf0io835IEEcnegiZfpAfvDPuq_kt6y7ywaAsPoEALw_wcB"></iframe>
+        <!-- Unterer Rand des Bildschirms -->
+        <div class="screen-bottom"></div>
+    </div>
+
+</body>
+</html>
